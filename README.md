@@ -1,8 +1,9 @@
 Spotify account creator
-Author: Yudha Tira Pamungkas 
 
-$git clone https://github.com/yudhatira21/spotify-creator
+https://facebook.com/yudha.t.pamungkas.3 
 
-$cd spotify-creator
+git clone https://github.com/yudhatira21/spotify-creator
 
-$php run.php
+cd spotify-creator
+
+php run.php
