@@ -1,7 +1,8 @@
 <?php 
 /**
 *@author yudha tira pamunkas
-*@version 1.0
+*@version 1.2
+*@copyright anak anjing luh yg cuma ganti author
 */
 
 function curl($url) {
@@ -18,11 +19,11 @@ function curl($url) {
 }
 
 function check_email($email) {
-	$check_email = curl('https://apiyudha.000webhostapp.com/spotify/check_mail.php?email='.$email);
+	$check_email = curl('https://api-website-yudha.000webhostapp.com/email.php?email='.$email);
 
-	if (strrpos($check_email, 'registered')) {
+	if (strrpos($check_email, '2')) {
 		$result = "registered";
-	} elseif (strrpos($check_email,  'ok')) {
+	} elseif (strrpos($check_email,  '1')) {
 		$result = "ok";
 	} else {
 		$result = "failed";
@@ -32,7 +33,7 @@ function check_email($email) {
 }
 
 function create_account($email,$password) {
-	$create = curl('https://apiyudha.000webhostapp.com/spotify/create.php?email='.$email.'&password='.$password);
+	$create = curl('https://api-website-yudha.000webhostapp.com/create.php?email='.$email.'&password='.$password);
 
 	if (strrpos($create, 'success')) {
 		echo "[+] Success | ".$email." | ".$password."\n";
@@ -49,7 +50,7 @@ function create_account($email,$password) {
 function start() {
 	print("=============================\n");
 	print("   Spotify account creator  \n");
-	print("         Version 1.0        \n");
+	print("         Version 1.2        \n");
 	print("   Created by yudha tira p  \n");
 	print("=============================\n");
 	echo "\n[#] Email: ";
