@@ -2,7 +2,6 @@
 /**
 *@author yudha tira pamunkas
 *@version 1.2
-*@copyright anak anjing luh yg cuma ganti author
 */
 
 function curl($url) {
